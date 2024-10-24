@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <a href="/">
+        <button>Home</button>
+    </a>
+
+<center>
+    <h1>Title for Upvote</h1>
+    <hr>
+    <table border="1px" width="600px">
+        <tr style="text-align:center">
+            <th>Title</th>
+            <th>avg_uv</th>
+        </tr>
+        {% for i in items1 %}
+        <tr style="text-align:center">
+            <td>{{ i.Title  }}</td>
+            <td>{{ i.avg_uv  }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+<br>
+<center>
+    <h1>Title for Review</h1>
+    <hr>
+    <table border="1px" width="600px">
+        <tr style="text-align:center">
+            <th>Title</th>
+            <th>avg_uv</th>
+        </tr>
+        {% for i in items2 %}
+        <tr style="text-align:center">
+            <td>{{ i.Title  }}</td>
+            <td>{{ i.avg_uv  }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+
+</body>
+</html>

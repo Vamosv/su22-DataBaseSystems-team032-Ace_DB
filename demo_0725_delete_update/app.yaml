@@ -1,0 +1,16 @@
+runtime: python38 # or another supported version
+
+instance_class: F1 # this is the cheapest option
+
+env_variables:
+    MYSQL_USER: ''
+    MYSQL_PASSWORD: ''
+    MYSQL_DB: 'backup_stage4_acedb'
+    MYSQL_HOST: ''
+handlers:
+
+- url: /script
+  static_dir: static/script
+
+- url: /styles
+  static_dir: static/styles

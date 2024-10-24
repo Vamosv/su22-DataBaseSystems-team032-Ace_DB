@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Comment here!</title>
+</head>
+<body>
+    <a href="/">
+        <button>Home</button>
+    </a>
+
+<form action="/insert/gets/" method="post">
+    <p>UserID: <input type="text" name="UserID"></p>
+    <p>GameID: <input type="text" name="GameID"></p>
+    <p>Rating: <input type="text" name="Rating"></p>
+    <p>Comment: <input type="text" name="Comment"></p>
+    <input type="submit" value = "submit">
+</form>
+
+<center>
+    <form action="/insert/gets/" method="post">
+    <h1>The Newest Comments!</h1>
+    <hr>
+    <table border="1px" width="800px">
+        <tr style="text-align:center">
+            <th>Post ID</th>
+            <th>Game ID</th>
+            <th>Rating</th>
+            <th>Comment</th>
+            <th>User ID</th>
+        </tr>
+        {% for i in items %}
+        <tr style="text-align:center">
+            <td>{{ i.PostID  }}</td>
+            <td>{{ i.GameID  }}</td>
+            <td>{{ i.Rating  }}</td>
+            <td>{{ i.Comment   }}</td>
+            <td>{{ i.UserID  }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</center>
+
+</body>
+</html>

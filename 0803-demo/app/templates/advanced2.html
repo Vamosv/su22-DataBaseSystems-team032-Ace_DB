@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="/">
+        <button>Home</button>
+    </a>
+<center>
+    <h1>Compare Different Game Families</h1>
+    <hr>
+    <table border="1px" width="400px">
+        <tr style="text-align:center">
+            <th>Familyname</th>
+            <th>AvgDifficulty</th>
+            <th>AvgDuration</th>
+            <th>PartyFriendly</th>
+        </tr>
+        {% for i in items %}
+        <tr style="text-align:center">
+            <td>{{ i.Familyname  }}</td>
+            <td>{{ i.AvgDifficulty  }}</td>
+            <td>{{ i.AvgDuration   }}</td>
+            <td>{{ i.PartyFriendly  }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</center>
+
+</body>
+</html>
+

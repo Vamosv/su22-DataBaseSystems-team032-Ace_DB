@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <a href="/">
+        <button>Home</button>
+    </a>
+<form action="/update/gets/" method="post">
+    <p>UserID: <input type="text" name="UserID"></p>
+    <p>Age: <input type="text" name="Age"></p>
+    <p>Region: <input type="text" name="Region"></p>
+    <input type="submit", value = "submit">
+</form>
+
+<center>
+    <form action="/update/gets/" method="post">
+    <h1>Update Result</h1>
+    <hr>
+    <table border="1px" width="800px">
+        <tr style="text-align:center">
+            <th>UserID</th>
+            <th>Age</th>
+            <th>Region</th>
+        </tr>
+        {% for i in items_update %}
+        <tr style="text-align:center">
+            <td>{{ i.UserID  }}</td>
+            <td>{{ i.Age  }}</td>
+            <td>{{ i.Region  }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</center>
+
+</body>
+</html>

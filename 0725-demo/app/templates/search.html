@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <a href="/">
+        <button>Home</button>
+    </a>
+
+<form action="/search/gets/" method="post">
+
+    <p>search game: <input type="text" name="keywords"></p>
+    <input type="submit", value = "submit">
+</form>
+
+<center>
+    <form action="/search/gets/" method="post">
+    <h1>search result</h1>
+    <hr>
+    <table border="1px" width="800px">
+        <tr style="text-align:center">
+            <th>Game Name</th>
+            <th>Genre</th>
+            <th>Year Published</th>
+            <th>Description</th>
+            <th>Difficulty</th>
+        </tr>
+        {% for i in items %}
+        <tr style="text-align:center">
+            <td>{{ i.GameName  }}</td>
+            <td>{{ i.Genre  }}</td>
+            <td>{{ i.YearPublished   }}</td>
+            <td>{{ i.Description  }}</td>
+            <td>{{ i.Difficulty  }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</center>
+
+</body>
+</html>
+
